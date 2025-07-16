@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-img {
+    display: flex;
+    background-image: url("https://preview.colorlib.com/theme/unwind/images/bg_3.jpg.webp");
+    height: 500px;
+    width: 98.8vw;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: auto;
+    height: 100%;
+    width: 98.7vw;
+
+}
+
+.hero-section {
+    background-image: url("https://preview.colorlib.com/theme/unwind/images/bg_1.jpg.webp");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    filter: contrast(80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-section {
+    position: relative;
+    height: 100%;
+    width: 1166px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.room-card:hover .card-text {
+    background: black;
+    color: white;
+}
+
+.room-card:hover .card-text h2 {
+    color: white;
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(60%);
+    width: 98.8vw;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://preview.colorlib.com/theme/unwind/images/bg_2.jpg.webp");
+}
+
+.menu-card {
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-card:hover {
+    background-color: #171717;
+    color: #fff;
+}
+
+/* BLOG PAGE */
+
+.blog-page {
+    height: 100%;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ROOM PAGE */
+
+.room-page {
+    height: 100%;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    background: #e5e7eb;
+    color: #000;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #c5a880;
+    color: #fff;
+}
+
+
+/* ABOUT PAGE */
+
+.about-page {
+    position: relative;
+    height: 100%;
+    width: 98.6vw;   
+}
