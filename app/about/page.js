@@ -9,6 +9,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css'
 
+const clickEvent = () => {
+  alert("Thanks for Booking.")
+}
+
+
 const cards = [
   { id: 1, img: 'https://preview.colorlib.com/theme/unwind/images/person_1.jpg.webp', title: 'Roger Scott', description: 'TFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
   { id: 2, img: 'https://preview.colorlib.com/theme/unwind/images/person_2.jpg.webp', title: 'Rohan Singh', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
@@ -21,24 +26,30 @@ const about = () => {
     <div className='about-page'>
       <div className="bg-img">
         <div className="bg-text">
-          <h1 className='text-6xl text-white font-[700]'>About us</h1>
+          <h1 className='md:text-6xl text-4xl text-white font-[700]'>About us</h1>
         </div>
       </div>
 
       <div className="text-gray-600 body-font max-w-screen-xl mx-auto px-4 py-16">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col sm:flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            <Image className="object-cover object-center rounded-sm opacity-75" alt="hero" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width={870}
-              height={580} />
+            <Image
+              src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Example image"
+              width={870}
+              height={580}
+              className="rounded-lg"
+            />
+
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <span className="text-amber-600 capitalize">About us</span>
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-800">HotelStay A Hotel Booking Agency
+            <h1 className="title-font md:text-4xl text-2xl mb-4 font-medium text-gray-800">HotelStay A Hotel Booking Agency
             </h1>
             <p className="mb-8 leading-relaxed">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex cursor-pointer text-white capitalize bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Booking your room now</button>
+              <button className="inline-flex cursor-pointer text-white capitalize bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onClick={clickEvent} >Booking your room now</button>
             </div>
           </div>
         </div>
@@ -46,11 +57,11 @@ const about = () => {
 
       <div className='video-section text-center'>
         <div className='flex flex-col justify-center items-center'>
-          <p className='uppercase text-white text-2xl font-[500]'>watch our luxurious hotel</p>
-          <h1 className='capitalize text-6xl text-white my-3 font-[600]'>take a tour</h1>
+          <p className='uppercase text-white md:text-2xl text-xl font-[500]'>watch our luxurious hotel</p>
+          <h1 className='capitalize md:text-6xl text-2xl text-white my-3 font-[600]'>take a tour</h1>
           <div className='text-3xl bg-[#c5a880] border p-4 rounded-full text-white animate-ping transition delay-200 duration-500'>
             <Link href="https://youtu.be/qyuDMZBWaDw?si=RZZKao7rfgapq63A" >
-              <div className='text-3xl w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-ping'>
+              <div className='md:text-3xl text-2xl w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-ping'>
 
                 <FaPlay />
               </div>
@@ -61,9 +72,9 @@ const about = () => {
 
       </div>
 
-      <div className='flex flex-col justify-center items-center  max-w-screen-xl mx-14 px-4 py-20 text-center'>
-        <span className='uppercase text-2xl text-[#c5a880]'>testimonial</span>
-        <h1 className='text-5xl font-[600] capitalize'>happy guests</h1>
+      <div className='flex flex-col justify-center items-center  max-w-screen-xl mx-auto px-4 py-20 text-center'>
+        <span className='uppercase md:text-2xl text-[#c5a880]'>testimonial</span>
+        <h1 className='md:text-5xl text-2xl font-[600] capitalize'>happy guests</h1>
         <div className='flex w-[97vw] my-16'>
 
           <Swiper
