@@ -9,6 +9,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css'
 
+const clickEvent = ()=>{
+  alert("Thanks for Booking.")
+}
+
 const blogs = [
   {
     id: 1,
@@ -62,8 +66,8 @@ export default function Home() {
 
       <div className="hero-section">
         <div className="hero-text text-center px-4 py-4">
-          <p className='text-2xl text-white font-[600]'>Enjoy Your Wonderful Holidays With A Great Luxury Experience!</p>
-          <h1 className='text-4xl text-red-500 font-[700] '>Most Relaxing Place</h1>
+          <p className='md:text-2xl text-xl text-white font-[600]'>Enjoy Your Wonderful Holidays With A Great Luxury Experience!</p>
+          <h1 className='md:text-4xl text-2xl text-red-500 font-[700] '>Most Relaxing Place</h1>
         </div>
       </div>
 
@@ -81,20 +85,20 @@ export default function Home() {
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <span className="text-amber-600 capitalize">About us</span>
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-800">HotelStay A Hotel Booking Agency
+            <h1 className="title-font md:text-4xl text-2xl mb-4 font-medium text-gray-800">HotelStay A Hotel Booking Agency
             </h1>
             <p className="mb-8 leading-relaxed">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex cursor-pointer text-white capitalize bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Booking your room now</button>
+              <button className="inline-flex cursor-pointer text-white capitalize bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onClick={clickEvent} >Booking your room now</button>
             </div>
           </div>
         </div>
       </div>
 
       <div className="service-sectionn text-center py-10 px-4 sm:px-6 lg:px-10">
-        <span className="text-[#c5a880] text-2xl">StayHotel Service</span>
-        <h1 className="text-3xl sm:text-4xl my-2 font-semibold">Explore Our Hotel Services</h1>
+        <span className="text-[#c5a880] md:text-2xl">StayHotel Service</span>
+        <h1 className="md:text-3xl sm:text-4xl my-2 font-semibold">Explore Our Hotel Services</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
           {services.map((service) => (
@@ -115,7 +119,7 @@ export default function Home() {
 
       <div className="flex flex-col my-8 justify-center items-center max-w-screen-xl mx-auto px-4 py-20 text-center">
         <span className="uppercase text-[#c5a880]">our rooms</span>
-        <h1 className="capitalize text-4xl sm:text-5xl font-semibold my-2">featured rooms</h1>
+        <h1 className="capitalize md:text-5xl text-2xl font-semibold my-2">featured rooms</h1>
 
         <div className="grid gap-10 mt-10 md:grid-cols-3">
           <div className="rounded-lg overflow-hidden shadow-md">
@@ -189,11 +193,11 @@ export default function Home() {
 
       <div className='video-section text-center'>
         <div className='flex flex-col justify-center items-center'>
-          <p className='uppercase text-white text-2xl font-[500]'>watch our luxurious hotel</p>
-          <h1 className='capitalize text-6xl text-white my-3 font-[600]'>take a tour</h1>
+          <p className='uppercase text-white md:text-2xl text-xl font-[500]'>watch our luxurious hotel</p>
+          <h1 className='capitalize md:text-6xl text-2xl text-white my-3 font-[600]'>take a tour</h1>
           <div className='text-3xl bg-[#c5a880] border p-4 rounded-full text-white animate-ping transition delay-200 duration-500'>
             <Link href="https://youtu.be/qyuDMZBWaDw?si=RZZKao7rfgapq63A" >
-              <div className='text-3xl w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-ping'>
+              <div className='md:text-3xl text-2xl w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-ping'>
 
                 <FaPlay />
               </div>
@@ -205,8 +209,8 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center items-center flex-col my-20 max-w-screen-xl mx-auto px-4 py-20 text-center'>
-        <span className='uppercase text-[#c5a880] text-2xl'>resto & bar</span>
-        <h1 className='capitalize text-5xl font-semibold'>restaurant & bar</h1>
+        <span className='uppercase text-[#c5a880] md:text-2xl'>resto & bar</span>
+        <h1 className='capitalize font-semibold md:text-5xl text-2xl'>restaurant & bar</h1>
 
         <div className='relative w-full h-52 my-10 opacity-70'>
           <Image
@@ -244,8 +248,8 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col justify-center items-center  max-w-screen-xl mx-auto px-4 py-20 text-center'>
-        <span className='uppercase text-2xl text-[#c5a880]'>testimonial</span>
-        <h1 className='text-5xl font-[600] capitalize'>happy guests</h1>
+        <span className='uppercase md:text-2xl text-[#c5a880]'>testimonial</span>
+        <h1 className='md:text-5xl font-[600] text-2xl capitalize'>happy guests</h1>
         <div className='flex w-[97vw] my-16'>
 
           <Swiper
@@ -276,8 +280,8 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col items-center  max-w-screen-xl py-20 text-center mx-auto px-5 my-10'>
-        <span className='text-2xl text-[#c5a880] uppercase'>our blog</span>
-        <h1 className='text-5xl capitalize font-semibold mb-10'>recent blog</h1>
+        <span className='md:text-2xl text-[#c5a880] uppercase'>our blog</span>
+        <h1 className='md:text-5xl text-2xl capitalize font-semibold mb-10'>recent blog</h1>
 
         <div className="flex flex-wrap -m-4">
           {blogs.map((blog) => (
