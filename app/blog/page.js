@@ -82,13 +82,13 @@ const BlogSection = () => {
     <section className='blog-page'>
 
       <div className="bg-img">
-        <div className="bg-text">
-          <h1 className='text-6xl text-white font-[700]'>Our Blogs</h1>
+       <div className="bg-text">
+          <h1 className='md:text-6xl text-4xl text-white font-[700]'>Our Blogs</h1>
         </div>
       </div>
       <div className='flex flex-col items-center w-full max-w-screen-xl mx-auto px-5 my-10'>
-        <span className='text-2xl text-[#c5a880] uppercase'>our blog</span>
-        <h1 className='text-5xl capitalize font-semibold mb-10'>recent blog</h1>
+ <span className='md:text-2xl text-xl text-[#c5a880] uppercase'>our blog</span>
+        <h1 className='md:text-5xl text-2xl capitalize font-semibold mb-10'>recent blog</h1>
 
         <div className="flex flex-wrap -m-4">
           {blogs.map((blog) => (
