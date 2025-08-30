@@ -77,6 +77,10 @@ const cards = [
   },
 ];
 
+const Bookhandle = ()=>{
+  confirm("You want to book this room.")
+}
+
 const Room = () => {
   return (
     <section className="room-page">
@@ -114,7 +118,7 @@ const Room = () => {
                     <p className="text-[#c5a880] text-lg font-medium">
                       {card.price}
                     </p>
-                    <button className="border px-5 py-2 rounded hover:bg-black hover:text-white transition">
+                    <button className="border px-5 py-2 rounded hover:bg-black hover:text-white transition"  onClick={Bookhandle}>
                       {card.btn}
                     </button>
                   </div>
@@ -127,8 +131,7 @@ const Room = () => {
 
       <div className="service-sectionn text-center py-10 px-4 sm:px-6 lg:px-10">
         <span className="text-[#c5a880] md:text-2xl">StayHotel Service</span>
-        <h1 className="text-2xl md:text-4xl my-2 font-semibold">Explore Our Hotel Services</h1>
-
+    <h1 className="text-2xl md:text-4xl my-2 font-semibold">Explore Our Hotel Services</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
           {services.map((service) => (
             <Link
