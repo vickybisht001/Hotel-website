@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 
 const Contact = () => {
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const ref = useRef();
 
@@ -37,6 +37,8 @@ const Contact = () => {
     } catch (error) {
       console.error("Error:", error);
       alert("⚠️ Something went wrong.");
+    }finally{
+      setIsLoading(false);
     }
   };
 
