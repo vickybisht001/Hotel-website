@@ -2,9 +2,12 @@
 import React, { useState, useRef } from "react";
 
 const Contact = () => {
+
+  const [isLoading, setIsLoading] = useState(false)
+
   const ref = useRef();
 
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
@@ -15,6 +18,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const res = await fetch("/api/contact", {
@@ -44,7 +48,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <section className="text-gray-600 body-font relative">
+      <div className="text-gray-600 body-font relative">
         <div className="container mx-auto px-4 py-16 flex flex-col lg:flex-row gap-10">
           <div className="lg:w-2/3 w-full relative overflow-hidden rounded-lg">
             <div className="relative w-full h-72 sm:h-96">
@@ -115,15 +119,24 @@ const Contact = () => {
                 className="w-full rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 py-2 px-3 outline-none resize-none"
               ></textarea>
             </div>
-            <button type="submit" className="text-white bg-indigo-500 hover:bg-indigo-600 py-2 px-6 rounded text-lg">
-              Send Message
+
+            <button
+              type="submit"
+              disabled={isLoading}
+              className={`flex mx-auto px-6 py-2 rounded text-white transition ${isLoading
+                ? "bg-blue-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
+                }`}
+            >
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
+
             <p className="text-xs text-gray-500 mt-3">We will get back to you as soon as possible!</p>
           </form>
         </div>
-      </section>
-    </section>
+      </div >
+    </section >
   );
-};
+};  
 
 export default Contact;
