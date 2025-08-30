@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 const Contact = () => {
   const ref = useRef();
 
-  const [formData, setFormData] = useState({
+   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
@@ -13,11 +13,27 @@ const Contact = () => {
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(`Message sent by ${formData.name}`);
-    ref.current.reset();
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert(`✅ Message sent successfully!`);
+        ref.current.reset();
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("❌ Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("⚠️ Something went wrong.");
+    }
   };
 
   return (
@@ -99,7 +115,6 @@ const Contact = () => {
                 className="w-full rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 py-2 px-3 outline-none resize-none"
               ></textarea>
             </div>
-
             <button type="submit" className="text-white bg-indigo-500 hover:bg-indigo-600 py-2 px-6 rounded text-lg">
               Send Message
             </button>
