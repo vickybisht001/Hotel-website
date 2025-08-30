@@ -13,12 +13,11 @@ const clickEvent = () => {
   alert("Thanks for Booking.")
 }
 
-
 const cards = [
-  { id: 1, img: 'https://preview.colorlib.com/theme/unwind/images/person_1.jpg.webp', title: 'Roger Scott', description: 'TFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
-  { id: 2, img: 'https://preview.colorlib.com/theme/unwind/images/person_2.jpg.webp', title: 'Rohan Singh', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
-  { id: 3, img: 'https://preview.colorlib.com/theme/unwind/images/person_3.jpg.webp', title: 'Arjun Singhania', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
-  { id: 4, img: 'https://preview.colorlib.com/theme/unwind/images/person_4.jpg.webp', title: 'Robert Jone', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
+  { id: 1, img: 'https://preview.colorlib.com/theme/unwind/images/person_1.jpg.webp', title: 'Roger Scott', description: 'TFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐" },
+  { id: 2, img: 'https://preview.colorlib.com/theme/unwind/images/person_2.jpg.webp', title: 'Rohan Singh', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐⭐" },
+  { id: 3, img: 'https://preview.colorlib.com/theme/unwind/images/person_3.jpg.webp', title: 'Arjun Singhania', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐" },
+  { id: 4, img: 'https://preview.colorlib.com/theme/unwind/images/person_4.jpg.webp', title: 'Robert Jone', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐⭐" },
 ];
 
 const about = () => {
@@ -40,7 +39,6 @@ const about = () => {
               height={580}
               className="rounded-lg"
             />
-
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <span className="text-amber-600 capitalize">About us</span>
@@ -62,21 +60,17 @@ const about = () => {
           <div className='text-3xl bg-[#c5a880] border p-4 rounded-full text-white animate-ping transition delay-200 duration-500'>
             <Link href="https://youtu.be/qyuDMZBWaDw?si=RZZKao7rfgapq63A" >
               <div className='md:text-3xl text-2xl w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-ping'>
-
                 <FaPlay />
               </div>
-
             </Link>
           </div>
         </div>
-
       </div>
 
       <div className='flex flex-col justify-center items-center  max-w-screen-xl mx-auto px-4 py-20 text-center'>
         <span className='uppercase md:text-2xl text-[#c5a880]'>testimonial</span>
         <h1 className='md:text-5xl text-2xl font-[600] capitalize'>happy guests</h1>
         <div className='flex w-[97vw] my-16'>
-
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -96,14 +90,13 @@ const about = () => {
                     height={580} />
                   <h2 className="text-xl font-semibold my-2">{card.title}</h2>
                   <p className="text-gray-600 mt-2">{card.description}</p>
+                  <span>{card.rating}</span>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-
       </div>
-
 
     </div>
   )
