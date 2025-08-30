@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css'
 
 const clickEvent = ()=>{
-  alert("Thanks for Booking.")
+  alert("Thanks for booking this room.")
 }
 
 const blogs = [
@@ -53,10 +53,10 @@ const services = [
 ];
 
 const cards = [
-  { id: 1, img: 'https://preview.colorlib.com/theme/unwind/images/person_1.jpg.webp', title: 'Roger Scott', description: 'TFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
-  { id: 2, img: 'https://preview.colorlib.com/theme/unwind/images/person_2.jpg.webp', title: 'Rohan Singh', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
-  { id: 3, img: 'https://preview.colorlib.com/theme/unwind/images/person_3.jpg.webp', title: 'Arjun Singhania', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
-  { id: 4, img: 'https://preview.colorlib.com/theme/unwind/images/person_4.jpg.webp', title: 'Robert Jone', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.' },
+  { id: 1, img: 'https://preview.colorlib.com/theme/unwind/images/person_1.jpg.webp', title: 'Roger Scott', description: 'TFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐" },
+  { id: 2, img: 'https://preview.colorlib.com/theme/unwind/images/person_2.jpg.webp', title: 'Rohan Singh', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐⭐" },
+  { id: 3, img: 'https://preview.colorlib.com/theme/unwind/images/person_3.jpg.webp', title: 'Arjun Singhania', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐" },
+  { id: 4, img: 'https://preview.colorlib.com/theme/unwind/images/person_4.jpg.webp', title: 'Robert Jone', description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', rating:"⭐⭐⭐⭐" },
 ];
 
 export default function Home() {
@@ -67,11 +67,11 @@ export default function Home() {
       <div className="hero-section">
         <div className="hero-text text-center px-4 py-4">
           <p className='md:text-2xl text-xl text-white font-[600]'>Enjoy Your Wonderful Holidays With A Great Luxury Experience!</p>
-          <h1 className='md:text-4xl text-2xl text-red-500 font-[700] '>Most Relaxing Place</h1>
+          <h1 className='md:text-4xl text-2xl text-red-500 font-[700] '>Welcome to the HotelStay</h1>
         </div>
       </div>
 
-      <div className="text-gray-600 body-font max-w-screen-xl mx-auto px-4 py-16">
+      <div className="text-gray-600 body-font max-w-screen-xl mx-auto px-4 py-6">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col sm:flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <Image
@@ -117,7 +117,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col my-8 justify-center items-center max-w-screen-xl mx-auto px-4 py-20 text-center">
+      <div className="flex flex-col my-8 justify-center items-center max-w-screen-xl mx-auto px-4 py-10 text-center">
         <span className="uppercase text-[#c5a880]">our rooms</span>
         <h1 className="capitalize md:text-5xl text-2xl font-semibold my-2">featured rooms</h1>
 
@@ -137,7 +137,7 @@ export default function Home() {
               </p>
               <div className="flex justify-between items-center gap-4 mt-4">
                 <p className="text-[#c5a880] font-medium">$450/NIGHT</p>
-                <button className="border px-5 py-2 rounded hover:bg-[#c5a880] hover:text-white transition">
+                <button className="border px-5 py-2 rounded hover:bg-[#c5a880] hover:text-white transition" onClick={clickEvent}>
                   Book now
                 </button>
               </div>
@@ -152,7 +152,7 @@ export default function Home() {
               </p>
               <div className="flex justify-between items-center gap-4 mt-4">
                 <p className="text-[#c5a880] font-medium">$500/NIGHT</p>
-                <button className="border px-5 py-2 rounded hover:bg-[#c5a880] hover:text-white transition">
+                <button className="border px-5 py-2 rounded hover:bg-[#c5a880] hover:text-white transition" onClick={clickEvent}>
                   Book now
                 </button>
               </div>
@@ -181,7 +181,7 @@ export default function Home() {
               </p>
               <div className="flex justify-between items-center gap-4 mt-4">
                 <p className="text-[#c5a880] font-medium">$650/NIGHT</p>
-                <button className="border px-5 py-2 rounded hover:bg-[#c5a880] hover:text-white transition">
+                <button className="border px-5 py-2 rounded hover:bg-[#c5a880] hover:text-white transition" onClick={clickEvent}>
                   Book now
                 </button>
               </div>
@@ -189,7 +189,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
 
       <div className='video-section text-center'>
         <div className='flex flex-col justify-center items-center'>
@@ -208,7 +207,7 @@ export default function Home() {
 
       </div>
 
-      <div className='flex justify-center items-center flex-col my-20 max-w-screen-xl mx-auto px-4 py-20 text-center'>
+      <div className='flex justify-center items-center flex-col my-5 max-w-screen-xl mx-auto px-4 py-10 text-center'>
         <span className='uppercase text-[#c5a880] md:text-2xl'>resto & bar</span>
         <h1 className='capitalize font-semibold md:text-5xl text-2xl'>restaurant & bar</h1>
 
@@ -247,7 +246,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center items-center  max-w-screen-xl mx-auto px-4 py-20 text-center'>
+      <div className='flex flex-col justify-center items-center  max-w-screen-xl mx-auto px-4 py-10 text-center'>
         <span className='uppercase md:text-2xl text-[#c5a880]'>testimonial</span>
         <h1 className='md:text-5xl font-[600] text-2xl capitalize'>happy guests</h1>
         <div className='flex w-[97vw] my-16'>
@@ -271,6 +270,7 @@ export default function Home() {
                     height={580} />
                   <h2 className="text-xl font-semibold my-2">{card.title}</h2>
                   <p className="text-gray-600 mt-2">{card.description}</p>
+                  <span>{card.rating}</span>
                 </div>
               </SwiperSlide>
             ))}
@@ -279,7 +279,7 @@ export default function Home() {
 
       </div>
 
-      <div className='flex flex-col items-center  max-w-screen-xl py-20 text-center mx-auto px-5 my-10'>
+      <div className='flex flex-col items-center  max-w-screen-xl py-10 text-center mx-auto px-5'>
         <span className='md:text-2xl text-[#c5a880] uppercase'>our blog</span>
         <h1 className='md:text-5xl text-2xl capitalize font-semibold mb-10'>recent blog</h1>
 
